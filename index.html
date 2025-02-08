@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>This one is for a very cool friend</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*THE CODE FOR APLOLOGY</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			👋 Hey Therapist !<br />
+			How are you?<br />
+			<span class="comments">// I hope, fine 😊 </span><br />
+			Remember, the day we met? <br />
+			<span class="comments">// Btw Thanks for not kidnapping me that day 😆 </span><br />
+			I truly enjoyed your company ;<br />
+			But I felt u started behaving differently after that ;<br />
+			On call, I just wanted to know what went wrong ;<br />
+			May be, I said or did something that u didn't like... ; <br />
+			I genuinely feel sorry for last day 💔 ;<br />
+			I should have understood your situation and respected your space too :/  ;<br />
+			I should have realized that you cannot pick up calls when at home or at work ;<br />
+			<br/>
+			You were my first friend in Hyderabad outside the office, ; <br />
+			and in this short time,u truly became a very good friend 🫂 ;<br />
+			Will miss you for sure. ;<br />
+			Thanks for meeting yaar! ❤️ ;<br />
+			<span class="comments">// Will always be jealous of KTR --he looks more youthful than me 😂</span><br />
+			<br>
+			All I want to say is:<br />
+			I am sorry!! <br />
+			<br />
+			And, Seriously? KTR? Why? When??<br />
+			<br>
+			<br>
+			Now, If you accept my apology you can touch the heart below<br />
+			<br>
+			<span id="heartspan" onclick="window.location.href='index2.html';" style="cursor:pointer;">
+				<i class="fas fa-heart" id="icon"></i>
+			</span>	
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					I am Sorryyyyy! 
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					ps: avoid the heart symbol<br/>
+					<div class="signature">- Pankaj</div>
+				</div>
+				<div style="position: fixed; bottom: 10px; right: 10px; font-size: 12px; color: gray;">
+					Made with  ❤️  by Pankaj KC Stall
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2016, 8, 5);
+together.setHours(16);
+together.setMinutes(30);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
